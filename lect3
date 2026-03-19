@@ -1,0 +1,31 @@
+📈 KDE Plot (Kernel Density Estimation)
+
+KDE helps visualize the distribution of data smoothly.
+
+import seaborn as sns
+import matplotlib.pyplot as plt
+df = sns.load_dataset("tips")
+sns.kdeplot(data=df, x="total_bill")
+plt.show()
+
+
+
+
+with fill parameter
+sns.kdeplot(data=df, x="total_bill", fill=True)
+
+
+
+with hue
+sns.kdeplot(data=df, x="total_bill", hue="sex", fill=True)
+
+
+with histplot
+sns.histplot(data=df, x="total_bill", kde=True)
+
+
+
+with bandwith
+sns.kdeplot(data=df, x="total_bill", bw_adjust=0.5)  
+
+sns.kdeplot(data=df, x="total_bill", bw_adjust=2) 
