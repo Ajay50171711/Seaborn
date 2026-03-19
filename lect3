@@ -29,3 +29,96 @@ with bandwith
 sns.kdeplot(data=df, x="total_bill", bw_adjust=0.5)  
 
 sns.kdeplot(data=df, x="total_bill", bw_adjust=2) 
+
+
+
+
+
+
+
+
+| Palette Type    | Example Palettes                                    |
+| --------------- | --------------------------------------------------- |
+| **Categorical** | deep, muted, pastel, Set1, Set2, Paired, colorblind |
+| **Sequential**  | Blues, BuGn, YlGnBu, YlOrRd, Oranges                |
+| **Diverging**   | coolwarm, RdBu, Spectral, PiYG, BrBG                |
+| **Cubehelix**   | cubehelix (with variations: dark, light)            |
+| **Custom**      | Hex, RGB colors, predefined names (red, blue)       |
+| **Colorblind**  | colorblind, muted (also colorblind-friendly)        |
+
+
+Categorical Palettes: Used when you have distinct groups (e.g., male/female, day of the week).
+
+Sequential Palettes: Used for ordered or continuous data (e.g., age, salary).
+
+Diverging Palettes: Perfect when your data has a midpoint (e.g., change from positive to negative).
+
+Cubehelix: A monochromatic palette that’s colorblind-friendly, perfect for grayscale plots.
+
+
+
+
+
+1. What is Aesthetic in Seaborn?
+In Seaborn, aesthetic refers to the overall appearance of your plot:
+
+
+Grid lines
+
+Font size and type
+
+Color schemes
+
+Background color
+
+Label positioning
+
+
+
+2. Themes in Seaborn
+What are Themes?
+Themes define the overall look (background, gridlines, etc.) of your plot.
+Seaborn has built-in themes to help you quickly choose an appealing visual style.
+
+
+
+Common Themes in Seaborn:
+=====================================
+darkgrid: Dark background with gridlines (default).
+
+whitegrid: White background with gridlines.
+
+dark: Dark background with no gridlines.
+
+white: Plain white background, no gridlines.
+
+ticks: White background with ticks along the axis.
+
+
+
+
+
+Context in Seaborn
+What is Context?
+Context changes the scale of elements in the plot based on the environment (e.g., paper, presentation, or a webpage).
+It adjusts the size of labels, titles, and lines to fit the context.
+
+
+Common Contexts in Seaborn:
+
+paper: Small elements for use in printed papers (default size).
+
+notebook: Medium elements, perfect for Jupyter notebooks.
+
+talk: Larger elements, useful for presentations.
+
+poster: Largest elements, ideal for posters or large prints.
+
+| Aesthetic Type | Options                                |
+| -------------- | -------------------------------------- |
+| **Theme**      | darkgrid, whitegrid, ticks, white      |
+| **Context**    | paper, notebook, talk, poster          |
+| **Palette**    | deep, muted, pastel, Set1, Blues, etc. |
+| **Font Scale** | 1.0 (default), 1.5 (larger)            |
+| **Gridlines**  | True/False (toggle visibility)         |
+| **Grid Style** | linestyle (dashed/solid), color        |
