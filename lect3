@@ -129,18 +129,35 @@ poster: Largest elements, ideal for posters or large prints.
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-# Set theme with custom parameters
-sns.set_theme(style="whitegrid",      # White background with grid
-              context="talk",         # Larger elements for presentations
-              palette="muted",       # Muted colors
-              font_scale=0.5,        # Slightly larger font
-              rc={"axes.titlesize": 10,  # Larger title
-                  "axes.labelsize": 8,  # Larger labels
-                  "xtick.direction": "out",  # Ticks inward
-                  "ytick.direction": "out"})  # Ticks inward
+# Load Seaborn's built-in 'tips' dataset
+df = sns.load_dataset("tips")
 
-# Create a plot
-sns.countplot(x="day", data=data)
+# Apply all aesthetic parameters in a single plot
+sns.set_theme(
+    style="whitegrid",           # Background with gridlines
+    context="talk",              # Larger plot elements for presentations
+    palette="pastel",            # Pastel color palette
+    font_scale=1.5,              # Increase font size for better readability
+    rc={
+        "grid.color": "gray",    # Set gridline color to gray
+        "grid.linestyle": "solid",  # Set gridlines to dashed style
+        "grid.linewidth": 0.7,   # Set gridline thickness
+        "axes.titlesize": 18,    # Larger title font size
+        "axes.labelsize": 14,    # Larger label font size
+        "xtick.direction": "in", # Inward ticks on x-axis
+        "ytick.direction": "in"  # Inward ticks on y-axis
+    }
+)
+
+# Create the plot
+plt.figure(figsize=(10, 6))
+sns.countplot(x="day", data=df)
+
+# Set a custom title
+plt.title("Count of Customers by Day", fontsize=18)
+
+# Show the plot
+plt.show()
 
 # Show the plot
 plt.title("Countplot of Days", fontsize=18)
