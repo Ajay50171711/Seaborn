@@ -122,3 +122,26 @@ poster: Largest elements, ideal for posters or large prints.
 | **Font Scale** | 1.0 (default), 1.5 (larger)            |
 | **Gridlines**  | True/False (toggle visibility)         |
 | **Grid Style** | linestyle (dashed/solid), color        |
+
+
+
+
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# Set theme with custom parameters
+sns.set_theme(style="whitegrid",      # White background with grid
+              context="talk",         # Larger elements for presentations
+              palette="muted",       # Muted colors
+              font_scale=0.5,        # Slightly larger font
+              rc={"axes.titlesize": 10,  # Larger title
+                  "axes.labelsize": 8,  # Larger labels
+                  "xtick.direction": "out",  # Ticks inward
+                  "ytick.direction": "out"})  # Ticks inward
+
+# Create a plot
+sns.countplot(x="day", data=data)
+
+# Show the plot
+plt.title("Countplot of Days", fontsize=18)
+plt.show()
