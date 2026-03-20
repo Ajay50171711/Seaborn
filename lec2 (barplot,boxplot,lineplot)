@@ -23,6 +23,14 @@ print(flight.head())
 sns.lineplot(x="year", y="passengers", data=flight)
 
 
+
+
+sns.scatterplot(x="size", y="total_bill", data=data)
+plt.show()
+
+
+
+
 with palette
 =================
 sns.countplot(x="day", data=data, palette="Set2")
