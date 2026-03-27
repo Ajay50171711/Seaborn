@@ -20,7 +20,18 @@ sns.regplot(x="petal_length", y="petal_width", data=df, ci=100)
 
 sns.regplot(x="petal_length", y="petal_width", data=df, ci=None)
 ------------------------------------------------------------------
+sns.regplot(x="petal_length", y="petal_width", data=df, order=7)
+---------------------------------------------------------------------
+sns.regplot(
+    x="petal_length",
+    y="petal_width",
+    data=df,
+    scatter_kws={"s": 50},   # size of dots
+    line_kws={"color": "red"}
+)
 
+plt.show()
+-----------------------------------
 
 
 
