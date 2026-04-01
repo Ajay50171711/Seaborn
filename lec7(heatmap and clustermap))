@@ -42,3 +42,19 @@ sns.clustermap(pivot_data, cmap="coolwarm")
 
 plt.show()
 =================================================================================
+ecdfplot
+------------
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# Load dataset
+tips = sns.load_dataset("tips")
+print(tips.head())
+
+sns.ecdfplot(data=tips, x="total_bill")
+
+plt.title("ECDF of Total Bill")
+plt.show()
+
+
+
